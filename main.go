@@ -45,7 +45,7 @@ func main() {
 				<-semaphore
 			}()
 
-			url := fixURL(args[i])
+			url := addHTTPPrefix(args[i])
 			md5Hash, err := hashService.MD5(context.Background(), url)
 			if err != nil {
 				fmt.Printf("%s %s\n", url, err)
@@ -57,7 +57,7 @@ func main() {
 	wg.Wait()
 }
 
-func fixURL(url string) string {
+func addHTTPPrefix(url string) string {
 	const prefix = "http://"
 	if strings.HasPrefix(url, prefix) {
 		return url
