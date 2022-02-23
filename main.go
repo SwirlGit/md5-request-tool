@@ -25,7 +25,7 @@ func main() {
 	}
 
 	httpClient := httpclient.NewClient(httpclient.Config{
-		Timeout:             5 * time.Second,
+		Timeout:             10 * time.Second,
 		IdleConnTimeout:     300 * time.Second,
 		TLSHandshakeTimeout: 10 * time.Second,
 		MaxIdleConns:        100,
