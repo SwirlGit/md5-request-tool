@@ -16,8 +16,12 @@ const defaultParallel = 10
 
 func main() {
 	var parallel int
-	flag.IntVar(&parallel, "parallel", defaultParallel, "amount of parallel requests")
+	flag.IntVar(&parallel, "parallel", defaultParallel, "amount of parallel requests > 0")
 	flag.Parse()
+	if parallel <= 0 {
+		fmt.Printf("invalid parallel value = %v\n", parallel)
+		flag.Usage()
+	}
 
 	args := flag.Args()
 	if len(args) == 0 {
