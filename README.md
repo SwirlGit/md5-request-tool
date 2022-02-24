@@ -5,8 +5,8 @@ This tool makes http requests and prints the address of the request along with t
 ## Table of Contents
 
  - [Install](#install)
- - [Makefile usage](#makefile usage)
- - [Usage without Makefile](#usage without Makefile)
+ - [Makefile usage](#makefile-usage)
+ - [Usage without Makefile](#usage-without-makefile)
  - [Examples](#examples)
 
 ## Install
@@ -19,6 +19,7 @@ $ git clone https://github.com/SwirlGit/md5-request-tool.git
 $ cd md5-request-tool
 ```
 
+<a name="makefile-usage"></a>
 ## Makefile usage
 
 Build tool
@@ -36,6 +37,7 @@ Run simple example
 $ make run-example
 ```
 
+<a name="usage-without-makefile"></a>
 ## Usage without Makefile
 Build tool
 ```bash
